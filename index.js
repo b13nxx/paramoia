@@ -13,7 +13,7 @@
  * @typedef {Object} module:Paramoia.Include
  * @property Only {Number} Only condition.
  * @property Must {Number} Must condition.
- * @property MustOnly {Number} MustOnly condition.
+ * @property MustOnly {Number} Must only condition.
  */
 
 /**
