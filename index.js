@@ -163,6 +163,46 @@ module.exports = class Paramoia {
   }
 
   /**
+   * It checks if **param** is not less than *threshold* or it is.
+   *
+   * @param {(Number|String|Array.<*>|Object.<String, *>)} param Parameter which will be checked.
+   * @param {Number} threshold Parameter which will be checked against.
+   * @returns {Boolean} Result of check.
+   * - `TRUE`: **param** IS NOT less than *threshold*.
+   * - `FALSE`: **param** IS less than *threshold*.
+   */
+  static min (param, threshold) {
+    if (this._isNumber(param)) {
+      return param > threshold
+    } else if (this._isString(param) || this._isArray(param)) {
+      return param.length > threshold
+    } else if (this._isObject(param)) {
+      return Object.keys(param).length > threshold
+    }
+    return false
+  }
+
+  /**
+   * It checks if **param** is not more than *threshold* or it is.
+   *
+   * @param {(Number|String|Array.<*>|Object.<String, *>)} param Parameter which will be checked.
+   * @param {Number} threshold Parameter which will be checked against.
+   * @returns {Boolean} Result of check.
+   * - `TRUE`: **param** IS NOT more than *threshold*.
+   * - `FALSE`: **param** IS more than *threshold*.
+   */
+  static max (param, threshold) {
+    if (this._isNumber(param)) {
+      return param < threshold
+    } else if (this._isString(param) || this._isArray(param)) {
+      return param.length < threshold
+    } else if (this._isObject(param)) {
+      return Object.keys(param).length < threshold
+    }
+    return false
+  }
+
+  /**
    * It checks if **param** includes **contain** or not.
    *
    * @private
