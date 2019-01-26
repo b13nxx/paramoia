@@ -65,6 +65,7 @@ module.exports = class Paramoia {
     } else if (condition === Paramoia.Include.MustOnly) {
       return this._contains(param, contain) && this._contains(contain, param)
     }
+    return false
   }
 
   /**
@@ -117,6 +118,7 @@ module.exports = class Paramoia {
     } else if (this._isObject(param)) {
       return key in param
     }
+    return false
   }
 
   /**
@@ -160,6 +162,7 @@ module.exports = class Paramoia {
     } else if (this._isObject(param)) {
       return Object.keys(param).length === 0
     }
+    return false
   }
 
   /**
