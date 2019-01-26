@@ -1,6 +1,6 @@
 # Paramoia
 
-[![](https://img.shields.io/npm/v/paramoia.svg?style=flat-square)](https://www.npmjs.com/package/paramoia) [![](https://img.shields.io/lgtm/grade/javascript/g/b8kkyn/paramoia.svg?style=flat-square&logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/b8kkyn/paramoia/context:javascript) [![](https://img.shields.io/lgtm/alerts/g/b8kkyn/paramoia.svg?style=flat-square&logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/b8kkyn/paramoia/alerts/) [![](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com) [![](https://img.shields.io/github/license/b8kkyn/paramoia.svg?style=flat-square)](https://github.com/b8kkyn/paramoia/blob/master/LICENSE)
+[![](https://img.shields.io/npm/v/paramoia.svg?style=flat-square)](https://www.npmjs.com/package/paramoia) [![](https://img.shields.io/codacy/grade/f0f9a5c829fb4842b75b54f295cf4c69.svg?style=flat-square)](https://www.codacy.com/app/b8kkyn/paramoia?utm_source=github.com&utm_medium=referral&utm_content=b8kkyn/paramoia&utm_campaign=Badge_Grade) [![](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com) [![](http://inch-ci.org/github/b8kkyn/paramoia.svg?branch=master&style=flat-square)](http://inch-ci.org/github/b8kkyn/paramoia) [![](https://img.shields.io/github/license/b8kkyn/paramoia.svg?style=flat-square)](https://github.com/b8kkyn/paramoia/blob/master/LICENSE)
 
 Cure for being paranoia about parameters which are coming in every single wrong way to our functions.
 
