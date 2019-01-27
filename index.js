@@ -104,6 +104,19 @@ module.exports = class Paramoia {
   }
 
   /**
+   * It checks if **param** is not one of **blacklist** or it is.
+   *
+   * @param {*} param Parameter which will be checked.
+   * @param {Array.<*>} blacklist Parameter which will be checked against.
+   * @returns {Boolean} Result of check.
+   * - `TRUE`: **param** IS NOT one of **blacklist**.
+   * - `FALSE`: **param** IS one of **blacklist**.
+   */
+  static invalid (param, blacklist) {
+    return !this.has(blacklist, param)
+  }
+
+  /**
    * It checks if **param** has **key** or not.
    *
    * @param {(Array.<String>|Object.<String, *>)} param Parameter which will be checked.
