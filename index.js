@@ -57,7 +57,7 @@ module.exports = class Paramoia {
    * - `TRUE`: Check condition met.
    * - `FALSE`: Check condition didn't meet.
    */
-  static includes (param, contain, condition) {
+  static includes (param, contain, condition = Paramoia.Include.Must) {
     if (condition === Paramoia.Include.Only) {
       return this._contains(contain, param)
     } else if (condition === Paramoia.Include.Must) {
