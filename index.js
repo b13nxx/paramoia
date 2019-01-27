@@ -93,8 +93,8 @@ module.exports = class Paramoia {
   /**
    * It checks if **param** is one of **whitelist** or not.
    *
-   * @param {Number|String} param Parameter which will be checked.
-   * @param {Array.<(Number|String)>} whitelist Parameter which will be checked against.
+   * @param {*} param Parameter which will be checked.
+   * @param {Array.<*>} whitelist Parameter which will be checked against.
    * @returns {Boolean} Result of check.
    * - `TRUE`: **param** IS one of **whitelist**.
    * - `FALSE`: **param** IS NOT one of **whitelist**.
