@@ -11,6 +11,8 @@ Cure for being paranoia about parameters which are coming in every single wrong 
     * [.has(param, key)](#module_Paramoia.has) ⇒ <code>Boolean</code>
     * [.values(param, types)](#module_Paramoia.values) ⇒ <code>Boolean</code>
     * [.empty(param)](#module_Paramoia.empty) ⇒ <code>Boolean</code>
+    * [.min(param, threshold)](#module_Paramoia.min) ⇒ <code>Boolean</code>
+    * [.max(param, threshold)](#module_Paramoia.max) ⇒ <code>Boolean</code>
     * [.Types](#module_Paramoia.Types) : <code>Object</code>
     * [.Include](#module_Paramoia.Include) : <code>Object</code>
 
@@ -20,9 +22,7 @@ Cure for being paranoia about parameters which are coming in every single wrong 
 It checks if **param** includes **contain** or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: Check condition met.
-- `FALSE`: Check condition didn't meet.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: Check condition met.- `FALSE`: Check condition didn't meet.  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -36,9 +36,7 @@ It checks if **param** includes **contain** or not.
 It checks if **param** equals *at least* one of **types** or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: **param** DOES equal *at least* one of **types**.
-- `FALSE`: **param** DOES NOT equal any of **types**.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** DOES equal *at least* one of **types**.- `FALSE`: **param** DOES NOT equal any of **types**.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -51,9 +49,7 @@ It checks if **param** equals *at least* one of **types** or not.
 It checks if **param** is one of **whitelist** or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: **param** IS one of **whitelist**.
-- `FALSE`: **param** IS NOT one of **whitelist**.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** IS one of **whitelist**.- `FALSE`: **param** IS NOT one of **whitelist**.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -66,9 +62,7 @@ It checks if **param** is one of **whitelist** or not.
 It checks if **param** has **key** or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: **param** HAS **key**.
-- `FALSE`: **param** HAS NOT **key**.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** HAS **key**.- `FALSE`: **param** HAS NOT **key**.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -81,9 +75,7 @@ It checks if **param** has **key** or not.
 It checks if every value of **param** is one of **types** or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: **param** HAS values which are one of **types**.
-- `FALSE`: **param** HAS values which are NOT one of **types**.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** HAS values which are one of **types**.- `FALSE`: **param** HAS values which are NOT one of **types**.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -96,13 +88,37 @@ It checks if every value of **param** is one of **types** or not.
 It checks if **param** is *empty* or not.
 
 **Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
-**Returns**: <code>Boolean</code> - Result of check.
-- `TRUE`: **param** IS *empty*.
-- `FALSE`: **param** IS NOT *empty*.  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** IS *empty*.- `FALSE`: **param** IS NOT *empty*.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | param | <code>String</code> \| <code>Array.&lt;\*&gt;</code> \| <code>Object.&lt;String, \*&gt;</code> | Parameter which will be checked. |
+
+<a name="module_Paramoia.min"></a>
+
+### Paramoia.min(param, threshold) ⇒ <code>Boolean</code>
+It checks if **param** is not less than *threshold* or it is.
+
+**Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** IS NOT less than *threshold*.- `FALSE`: **param** IS less than *threshold*.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| param | <code>Number</code> \| <code>String</code> \| <code>Array.&lt;\*&gt;</code> \| <code>Object.&lt;String, \*&gt;</code> | Parameter which will be checked. |
+| threshold | <code>Number</code> | Parameter which will be checked against. |
+
+<a name="module_Paramoia.max"></a>
+
+### Paramoia.max(param, threshold) ⇒ <code>Boolean</code>
+It checks if **param** is not more than *threshold* or it is.
+
+**Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** IS NOT more than *threshold*.- `FALSE`: **param** IS more than *threshold*.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| param | <code>Number</code> \| <code>String</code> \| <code>Array.&lt;\*&gt;</code> \| <code>Object.&lt;String, \*&gt;</code> | Parameter which will be checked. |
+| threshold | <code>Number</code> | Parameter which will be checked against. |
 
 <a name="module_Paramoia.Types"></a>
 
@@ -130,5 +146,5 @@ It checks if **param** is *empty* or not.
 | --- | --- | --- |
 | Only | <code>Number</code> | Only condition. |
 | Must | <code>Number</code> | Must condition. |
-| MustOnly | <code>Number</code> | MustOnly condition. |
+| MustOnly | <code>Number</code> | Must only condition. |
 
