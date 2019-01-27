@@ -51,7 +51,7 @@ module.exports = class Paramoia {
    * `Only`: **param** *can include less* than **contain** but different.
    * `Must`: **param** *must include* **contain**.
    * `MustOnly`: **param** *must only include* **contain**.
-   * You should use [Paramoia.Include.*]{@link module:Paramoia.Include}
+   * You should use one of [Paramoia.Include.*]{@link module:Paramoia.Include}
    *
    * @returns {Boolean} Result of check.
    * - `TRUE`: Check condition met.
