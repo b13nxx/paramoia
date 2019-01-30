@@ -1,3 +1,7 @@
+# HEAD
+
+- docs: add hits badge inside readme.md ([2d846b2](https://github.com/b8kkyn/paramoia/commit/2d846b2))
+
 # 0.3.1 (2019-01-30)
 
 - docs: fix typo in api documentation ([d2acfc5](https://github.com/b8kkyn/paramoia/commit/d2acfc5))
