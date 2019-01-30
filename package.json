@@ -1,6 +1,6 @@
 {
   "name": "paramoia",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Cure for being paranoia about parameters which are coming in every single wrong way to our functions.",
   "main": "index.js",
   "scripts": {
