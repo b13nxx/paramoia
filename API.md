@@ -8,6 +8,7 @@ Cure for being paranoia about parameters which are coming in every single wrong 
     * [.includes(param, contain, [condition])](#module_Paramoia.includes) ⇒ <code>Boolean</code>
     * [.equals(param, types)](#module_Paramoia.equals) ⇒ <code>Boolean</code>
     * [.valid(param, whitelist)](#module_Paramoia.valid) ⇒ <code>Boolean</code>
+    * [.invalid(param, blacklist)](#module_Paramoia.invalid) ⇒ <code>Boolean</code>
     * [.has(param, key)](#module_Paramoia.has) ⇒ <code>Boolean</code>
     * [.values(param, types)](#module_Paramoia.values) ⇒ <code>Boolean</code>
     * [.empty(param)](#module_Paramoia.empty) ⇒ <code>Boolean</code>
@@ -28,7 +29,7 @@ It checks if **param** includes **contain** or not.
 | --- | --- | --- | --- |
 | param | <code>Array.&lt;String&gt;</code> \| <code>Object.&lt;String, \*&gt;</code> |  | Parameter which will be checked. |
 | contain | <code>Array.&lt;String&gt;</code> \| <code>Object.&lt;String, \*&gt;</code> |  | Parameter which will be checked against. |
-| [condition] | <code>Number</code> | <code>Paramoia.Include.Must</code> | Parameter which indicates check condition: `Only`: **param** *can include less* than **contain** but different. `Must`: **param** *must include* **contain**. `MustOnly`: **param** *must only include* **contain**. You should use [Paramoia.Include.*](#module_Paramoia.Include) |
+| [condition] | <code>Number</code> | <code>Paramoia.Include.Must</code> | Parameter which indicates check condition: `Only`: **param** *can include less* than **contain** but different. `Must`: **param** *must include* **contain**. `MustOnly`: **param** *must only include* **contain**. You should use one of [Paramoia.Include.*](#module_Paramoia.Include) |
 
 <a name="module_Paramoia.equals"></a>
 
@@ -53,8 +54,21 @@ It checks if **param** is one of **whitelist** or not.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| param | <code>Number</code> \| <code>String</code> | Parameter which will be checked. |
-| whitelist | <code>Array.&lt;(Number\|String)&gt;</code> | Parameter which will be checked against. |
+| param | <code>\*</code> | Parameter which will be checked. |
+| whitelist | <code>Array.&lt;\*&gt;</code> | Parameter which will be checked against. |
+
+<a name="module_Paramoia.invalid"></a>
+
+### Paramoia.invalid(param, blacklist) ⇒ <code>Boolean</code>
+It checks if **param** is not one of **blacklist** or it is.
+
+**Kind**: static method of [<code>Paramoia</code>](#module_Paramoia)  
+**Returns**: <code>Boolean</code> - Result of check.- `TRUE`: **param** IS NOT one of **blacklist**.- `FALSE`: **param** IS one of **blacklist**.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| param | <code>\*</code> | Parameter which will be checked. |
+| blacklist | <code>Array.&lt;\*&gt;</code> | Parameter which will be checked against. |
 
 <a name="module_Paramoia.has"></a>
 

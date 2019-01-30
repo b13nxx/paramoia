@@ -1,3 +1,10 @@
+# 0.3.1 (2019-01-30)
+
+- docs: fix typo in api documentation ([d2acfc5](https://github.com/b8kkyn/paramoia/commit/d2acfc5))
+- feat: add invalid function ([711c8dd](https://github.com/b8kkyn/paramoia/commit/711c8dd))
+- docs: fix documentation of valid function ([4070a88](https://github.com/b8kkyn/paramoia/commit/4070a88))
+- fix: add missing default value for condition parameter of includes function ([d6abe68](https://github.com/b8kkyn/paramoia/commit/d6abe68))
+
 # 0.2.1 (2019-01-27)
 
 - fix: add default return value to includes, has and empty functions ([f00e56d](https://github.com/b8kkyn/paramoia/commit/f00e56d))
